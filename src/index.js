@@ -17,15 +17,11 @@ input.addEventListener(
         const countryList = countries.map(country => country);
         for (country of countryList) {
           const li = document.createElement('li');
-          const div = document.createElement('div');
-          div.style.backgroundImage = `url('data:image/svg+xml,${country.flags.svg}')`;
-          div.style.width = '30px';
-          div.style.height = '20px';
-          div.style.display = 'inline-block';
-          div.style.objectFit = 'contain';
+          const content = `<img src='${country.flags.svg}' height="20" width="30"/>`;
           li.textContent = `${country.name.official}`;
-          li.append(div);
+          
           list.append(li);
+          li.insertAdjacentHTML('afterbegin', content);
         }
       }
       if (countries.length > 10) {
@@ -42,9 +38,11 @@ input.addEventListener(
         populationDiv.textContent = `Population: ${countries[0].population}`;
         const allLanguages = Object.values(countries[0].languages).join(', ');
         languagesDiv.textContent = `Laguages: ${allLanguages}`;
-        const content = `<svg height="70px" width="70px">
-                <use xlink:href="${countries[0].flags.svg} height="70px" width="70px"" height="70px" width="70px"></use>
-              </svg>`;
+        const content = 
+        // `<svg height="70px" width="70px">
+        //         <use xlink:href="${countries[0].flags.svg} height="70" width="70"" height="70px" width="70px"></use>
+        //       </svg>`;
+        `<img src='${countries[0].flags.svg}' height="20" width="30"/>`;
         headerDiv.insertAdjacentHTML('afterbegin', content);
         info.append(headerDiv);
         info.append(capitalDiv);
