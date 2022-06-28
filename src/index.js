@@ -42,7 +42,7 @@ input.addEventListener(
         // `<svg height="70px" width="70px">
         //         <use xlink:href="${countries[0].flags.svg} height="70" width="70"" height="70px" width="70px"></use>
         //       </svg>`;
-        `<img src='${countries[0].flags.svg}' height="20" width="30"/>`;
+        `<img src='${countries[0].flags.svg}' height="20" width="30" style='margin-right:10px'/>`;
         headerDiv.insertAdjacentHTML('afterbegin', content);
         info.append(headerDiv);
         info.append(capitalDiv);
