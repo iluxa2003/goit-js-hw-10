@@ -48,8 +48,11 @@ input.addEventListener(
               populationDiv.textContent = `Population: ${countries[0].population}`;
               const allLanguages = Object.values(countries[0].languages).join(", ")
               languagesDiv.textContent = `Laguages: ${allLanguages}`
-
-              console.log(countries[0])
+              const content = `<svg height="70px" width="70px">
+              <use href="${countries[0].flags.svg}" height="70px" width="70px"></use>
+            </svg>`
+            headerDiv.insertAdjacentHTML("afterbegin",content)
+              // console.log(countries[0])
               info.append(headerDiv);
               info.append(capitalDiv);
               info.append(populationDiv);
