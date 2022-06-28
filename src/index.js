@@ -17,9 +17,9 @@ input.addEventListener(
         const countryList = countries.map(country => country);
         for (country of countryList) {
           const li = document.createElement('li');
-          const content = `<img src='${country.flags.svg}' height="20" width="30"/>`;
+          const content = `<img src='${country.flags.svg}' height="20" width="30" style='margin-right:10px'/>`;
           li.textContent = `${country.name.official}`;
-          
+          li.style.listStyle = "none"
           list.append(li);
           li.insertAdjacentHTML('afterbegin', content);
         }
