@@ -6,7 +6,7 @@ import Notiflix from 'notiflix';
 import { fetchCountries } from './fetchCountries';
 const DEBOUNCE_DELAY = 300;
 var debounce = require('lodash.debounce');
-
+//
 input.addEventListener(
   'input',
   debounce(() => {
