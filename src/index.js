@@ -15,7 +15,7 @@ input.addEventListener(
       info.innerHTML = '';
       if (countries.length > 2 && countries.length < 10) {
         const countryList = countries.map(country => country);
-        for (country of countryList) {
+        for (const country of countryList) {
           const li = document.createElement('li');
           const content = `<img src='${country.flags.svg}' height="20" width="30" style='margin-right:10px'/>`;
           li.textContent = `${country.name.official}`;
