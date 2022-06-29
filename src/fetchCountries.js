@@ -1,6 +1,6 @@
 export { fetchCountries };
 import Notiflix from 'notiflix';
-export default function fetchCountries(name) {
+function fetchCountries(name) {
   const myfetch = fetch(`https://restcountries.com/v3.1/name/${name}`).then(
     response => {
     //   console.log(response);
