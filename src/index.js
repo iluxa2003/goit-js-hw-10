@@ -46,8 +46,7 @@ function correctCountry(param) {
   info.append(languagesDiv);
 }
 function sameResults(countryObject){
-  const countryList = countryObject.map(country => country);
-  for (const country of countryList) {
+  for (const country of countryObject) {
     const li = document.createElement('li');
     const content = `<img src='${country.flags.svg}' height="20" width="30" style='margin-right:10px'/>`;
     li.textContent = `${country.name.official}`;
